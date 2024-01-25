@@ -75,7 +75,9 @@ function App(): JSX.Element {
     <Provider store={store}>
       <NavigationContainer>
         <Drawer.Navigator>
+           
           <Drawer.Screen name="Feed" component={Feed} />
+
         </Drawer.Navigator>
       </NavigationContainer>
     </Provider>

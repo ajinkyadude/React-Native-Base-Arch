@@ -29,6 +29,7 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import Feed from './App/Module/Feed/Feed';
 import {Provider} from 'react-redux';
 import {createStore} from './App/Redux/Store';
+import Support from './App/Module/Support/Support';
 
 const Drawer = createDrawerNavigator();
 
@@ -75,9 +76,20 @@ function App(): JSX.Element {
     <Provider store={store}>
       <NavigationContainer>
         <Drawer.Navigator>
-           
-          <Drawer.Screen name="Feed" component={Feed} />
-
+          <Drawer.Screen
+            name="Feed"
+            component={Feed}
+            options={{
+              headerShown: true,
+            }}
+          />
+          <Drawer.Screen
+            name="Support"
+            component={Support}
+            options={{
+              headerShown: true,
+            }}
+          />
         </Drawer.Navigator>
       </NavigationContainer>
     </Provider>
